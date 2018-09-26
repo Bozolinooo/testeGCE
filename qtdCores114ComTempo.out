@@ -1,0 +1,85 @@
+Quantidade de vezes que cada número de cores diferentes foi utilizado para colorir em 4 vértices
+
+       0        0        0        0       64        0        0        0 
+
+
+
+
+ 64 
+
+
+
+Tempo Gasto em Segundos para 4 vértices: 0.000000
+
+
+
+
+
+Quantidade de vezes que cada número de cores diferentes foi utilizado para colorir em 6 vértices
+
+       0        0        2       24      203      349      446        0 
+
+
+
+
+ 1024 
+
+
+
+Tempo Gasto em Segundos para 6 vértices: 0.000000
+
+
+
+
+
+Quantidade de vezes que cada número de cores diferentes foi utilizado para colorir em 8 vértices
+
+       0        0        2      124     1845     7492     8935     2082 
+
+
+
+
+ 20480 
+
+
+
+Tempo Gasto em Segundos para 8 vértices: 1.000000
+
+
+
+
+
+Quantidade de vezes que cada número de cores diferentes foi utilizado para colorir em 10 vértices
+
+       0        0        4      971    26144   167358   310584   117531 
+
+
+
+
+ 622592 
+
+
+
+Tempo Gasto em Segundos para 10 vértices: 39.000000
+
+
+
+
+
+Quantidade de vezes que cada número de cores diferentes foi utilizado para colorir em 12 vértices
+
+       0        0       10    10100   427849  4230461 11485883  6127937 
+
+
+
+
+ 22282240 
+
+
+
+Tempo Gasto em Segundos para 12 vértices: 1745.000000
+
+
+
+
+

@@ -1,0 +1,10 @@
+OCN7.cpp -> Implmentação do algoritmo OCN7
+bib.c -> Biblioteca com funções essenciais para se trabalahar em grafos.
+bib.h -> Header de bib.c
+cub0i.g6 -> Arquivos que contém todos os grafos cúbicos livres de isomorfismo.
+showg.c -> Programa que gera a matriz de adjacências a partir dos arquivos .g6
+qtdCores114ComTempo.out -> Resultados utilizados no artigo em ralação a tabela de tempo e para gerar o fator de aproximação.
+fator_de_aproximação.out -> Fator de aproximação de OCN7 em relação ao algoritmo Força Bruta 1
+torneios_probidos04-14 -> Torneios proibidos para os grafos cúbicos daquele número de vértices
+União_torneios_proibidos_4_a_14 -> União dos torneios proibidos de 04 a 14.
+makefile -> Arquivo de construção do programa que gera o arquivo de saida.

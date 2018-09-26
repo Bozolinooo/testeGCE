@@ -1,0 +1,490 @@
+\begin{figure}[H]
+  \centering
+    \begin{tikzpicture}[>=stealth',shorten >= 1pt,auto,node distance=1.4cm,semithick, state0/.style={circle,draw,minimum size=0.3cm,inner sep=0pt, fill = black!70}, state1/.style={circle,draw,minimum size=0.3cm,inner sep=0pt, fill = red!70}, state2/.style={circle,draw,minimum size=0.3cm,inner sep=0pt, fill = yellow!70}]
+
+    \node[state2][label=above:0]         (q0)                                        {};
+    \node                               (q0a)   [right of=q0]                       {};
+    \node                               (q0b)   [right of=q0a]                      {};
+    \node                               (q0c)   [right of=q0b]                      {};
+    \node[state0][label=above:1]         (q1)    [right of=q0c]                      {};
+    \node[state1][label=below:2]         (q2)    [below of=q0]                       {};
+    \node                               (q2a)   [right of=q2]                       {};
+    \node                               (q2b)   [right of=q2a]                      {};
+    \node                               (q2c)   [right of=q2b]                      {};
+    \node[state1][label=below:3]         (q3)    [below of=q1]                       {};
+    \node[state2][label=above:4]         (q4)    [above=1.4cm of q0a]                {};
+    \node[state0][label=below:5]         (q5)    [below of=q2a]                      {};
+    \node                               (q6a)   [above of=q0b]                      {};
+    \node[state1][label=above:6]         (q6)    [above of=q6a]                      {};
+    \node                               (q7a)   [below of=q2b]                      {};
+    \node[state2][label=below:7]         (q7)    [below of=q7a]                      {};
+    \node[state0][label=above:8]         (q8)    [above of=q0c]                      {};
+    \node[state0][label=below:9]         (q9)    [below=1.6cm of q2c]                {};
+    \node                               (q10a)  [above of=q0]                       {};
+    \node[state1][label=above:10]        (q10)   [above left =1.6cm of q10a]               {};
+    \node                               (q11a)  [below of=q2]                       {};
+    \node[state2][label=below:11]        (q11)   [below left =1.3cm of q11a]               {};
+
+    \path[->]
+                (q1) edge [sloped, above]		node [align=center]	{}	(q0)
+                (q1) edge [sloped, above]		node [align=center]	{}	(q2)
+                (q1) edge [sloped, above]		node [align=center]	{}	(q3)
+                (q2) edge [sloped, above]		node [align=center]	{}	(q0)
+                (q2) edge [sloped, above]		node [align=center]	{}	(q4)
+                (q3) edge [sloped, above]		node [align=center]	{}	(q0)
+                (q3) edge [sloped, above]		node [align=center]	{}	(q4)
+                (q5) edge [sloped, above]		node [align=center]	{}	(q4)
+                (q5) edge [sloped, above]		node [align=center]	{}	(q6)
+                (q5) edge [sloped, above]		node [align=center]	{}	(q7)
+                (q6) edge [sloped, above]		node [align=center]	{}	(q7)
+                (q8) edge [sloped, above]		node [align=center]	{}	(q6)
+                (q8) edge [sloped, above]		node [align=center]	{}	(q10)
+                (q8) edge [sloped, above]		node [align=center]	{}	(q11)
+                (q9) edge [sloped, above]		node [align=center]	{}	(q7)
+                (q9) edge [sloped, above]		node [align=center]	{}	(q10)
+                (q9) edge [sloped, above]		node [align=center]	{}	(q11)
+                (q10) edge [sloped, above]		node [align=center]	{}	(q11)
+                ;
+    \end{tikzpicture}
+\end{figure}
+\begin{figure}[H]
+  \centering
+    \begin{tikzpicture}[>=stealth',shorten >= 1pt,auto,node distance=1.4cm,semithick, state0/.style={circle,draw,minimum size=0.3cm,inner sep=0pt, fill = black!70}, state1/.style={circle,draw,minimum size=0.3cm,inner sep=0pt, fill = red!70}, state2/.style={circle,draw,minimum size=0.3cm,inner sep=0pt, fill = yellow!70}]
+
+    \node[state1][label=above:0]         (q0)                                        {};
+    \node                               (q0a)   [right of=q0]                       {};
+    \node                               (q0b)   [right of=q0a]                      {};
+    \node                               (q0c)   [right of=q0b]                      {};
+    \node[state2][label=above:1]         (q1)    [right of=q0c]                      {};
+    \node[state0][label=below:2]         (q2)    [below of=q0]                       {};
+    \node                               (q2a)   [right of=q2]                       {};
+    \node                               (q2b)   [right of=q2a]                      {};
+    \node                               (q2c)   [right of=q2b]                      {};
+    \node[state0][label=below:3]         (q3)    [below of=q1]                       {};
+    \node[state1][label=above:4]         (q4)    [above=1.4cm of q0a]                {};
+    \node[state2][label=below:5]         (q5)    [below of=q2a]                      {};
+    \node                               (q6a)   [above of=q0b]                      {};
+    \node[state1][label=above:6]         (q6)    [above of=q6a]                      {};
+    \node                               (q7a)   [below of=q2b]                      {};
+    \node[state1][label=below:7]         (q7)    [below of=q7a]                      {};
+    \node[state0][label=above:8]         (q8)    [above of=q0c]                      {};
+    \node[state2][label=below:9]         (q9)    [below=1.6cm of q2c]                {};
+    \node                               (q10a)  [above of=q0]                       {};
+    \node[state0][label=above:10]        (q10)   [above left =1.6cm of q10a]               {};
+    \node                               (q11a)  [below of=q2]                       {};
+    \node[state1][label=below:11]        (q11)   [below left =1.3cm of q11a]               {};
+
+    \path[->]
+                (q0) edge [sloped, above]		node [align=center]	{}	(q1)
+                (q2) edge [sloped, above]		node [align=center]	{}	(q0)
+                (q2) edge [sloped, above]		node [align=center]	{}	(q1)
+                (q2) edge [sloped, above]		node [align=center]	{}	(q4)
+                (q3) edge [sloped, above]		node [align=center]	{}	(q0)
+                (q3) edge [sloped, above]		node [align=center]	{}	(q1)
+                (q3) edge [sloped, above]		node [align=center]	{}	(q4)
+                (q4) edge [sloped, above]		node [align=center]	{}	(q5)
+                (q6) edge [sloped, above]		node [align=center]	{}	(q5)
+                (q6) edge [sloped, above]		node [align=center]	{}	(q9)
+                (q7) edge [sloped, above]		node [align=center]	{}	(q5)
+                (q8) edge [sloped, above]		node [align=center]	{}	(q6)
+                (q8) edge [sloped, above]		node [align=center]	{}	(q7)
+                (q8) edge [sloped, above]		node [align=center]	{}	(q11)
+                (q10) edge [sloped, above]		node [align=center]	{}	(q7)
+                (q10) edge [sloped, above]		node [align=center]	{}	(q9)
+                (q10) edge [sloped, above]		node [align=center]	{}	(q11)
+                (q11) edge [sloped, above]		node [align=center]	{}	(q9)
+                ;
+    \end{tikzpicture}
+\end{figure}
+\begin{figure}[H]
+  \centering
+    \begin{tikzpicture}[>=stealth',shorten >= 1pt,auto,node distance=1.4cm,semithick, state0/.style={circle,draw,minimum size=0.3cm,inner sep=0pt, fill = black!70}, state1/.style={circle,draw,minimum size=0.3cm,inner sep=0pt, fill = red!70}, state2/.style={circle,draw,minimum size=0.3cm,inner sep=0pt, fill = yellow!70}]
+
+    \node[state0][label=above:0]         (q0)                                        {};
+    \node                               (q0a)   [right of=q0]                       {};
+    \node                               (q0b)   [right of=q0a]                      {};
+    \node                               (q0c)   [right of=q0b]                      {};
+    \node[state2][label=above:1]         (q1)    [right of=q0c]                      {};
+    \node[state1][label=below:2]         (q2)    [below of=q0]                       {};
+    \node                               (q2a)   [right of=q2]                       {};
+    \node                               (q2b)   [right of=q2a]                      {};
+    \node                               (q2c)   [right of=q2b]                      {};
+    \node[state1][label=below:3]         (q3)    [below of=q1]                       {};
+    \node[state0][label=above:4]         (q4)    [above=1.4cm of q0a]                {};
+    \node[state1][label=below:5]         (q5)    [below of=q2a]                      {};
+    \node                               (q6a)   [above of=q0b]                      {};
+    \node[state2][label=above:6]         (q6)    [above of=q6a]                      {};
+    \node                               (q7a)   [below of=q2b]                      {};
+    \node[state0][label=below:7]         (q7)    [below of=q7a]                      {};
+    \node[state0][label=above:8]         (q8)    [above of=q0c]                      {};
+    \node[state1][label=below:9]         (q9)    [below=1.6cm of q2c]                {};
+    \node                               (q10a)  [above of=q0]                       {};
+    \node[state1][label=above:10]        (q10)   [above left =1.6cm of q10a]               {};
+    \node                               (q11a)  [below of=q2]                       {};
+    \node[state2][label=below:11]        (q11)   [below left =1.3cm of q11a]               {};
+
+    \path[->]
+                (q0) edge [sloped, above]		node [align=center]	{}	(q1)
+                (q1) edge [sloped, above]		node [align=center]	{}	(q2)
+                (q1) edge [sloped, above]		node [align=center]	{}	(q3)
+                (q2) edge [sloped, above]		node [align=center]	{}	(q0)
+                (q2) edge [sloped, above]		node [align=center]	{}	(q4)
+                (q3) edge [sloped, above]		node [align=center]	{}	(q0)
+                (q3) edge [sloped, above]		node [align=center]	{}	(q4)
+                (q5) edge [sloped, above]		node [align=center]	{}	(q4)
+                (q5) edge [sloped, above]		node [align=center]	{}	(q7)
+                (q6) edge [sloped, above]		node [align=center]	{}	(q5)
+                (q6) edge [sloped, above]		node [align=center]	{}	(q9)
+                (q7) edge [sloped, above]		node [align=center]	{}	(q11)
+                (q8) edge [sloped, above]		node [align=center]	{}	(q6)
+                (q9) edge [sloped, above]		node [align=center]	{}	(q8)
+                (q10) edge [sloped, above]		node [align=center]	{}	(q7)
+                (q10) edge [sloped, above]		node [align=center]	{}	(q8)
+                (q11) edge [sloped, above]		node [align=center]	{}	(q9)
+                (q11) edge [sloped, above]		node [align=center]	{}	(q10)
+                ;
+    \end{tikzpicture}
+\end{figure}
+\begin{figure}[H]
+  \centering
+    \begin{tikzpicture}[>=stealth',shorten >= 1pt,auto,node distance=1.4cm,semithick, state0/.style={circle,draw,minimum size=0.3cm,inner sep=0pt, fill = black!70}, state1/.style={circle,draw,minimum size=0.3cm,inner sep=0pt, fill = red!70}, state2/.style={circle,draw,minimum size=0.3cm,inner sep=0pt, fill = yellow!70}]
+
+    \node[state1][label=above:0]         (q0)                                        {};
+    \node                               (q0a)   [right of=q0]                       {};
+    \node                               (q0b)   [right of=q0a]                      {};
+    \node                               (q0c)   [right of=q0b]                      {};
+    \node[state2][label=above:1]         (q1)    [right of=q0c]                      {};
+    \node[state0][label=below:2]         (q2)    [below of=q0]                       {};
+    \node                               (q2a)   [right of=q2]                       {};
+    \node                               (q2b)   [right of=q2a]                      {};
+    \node                               (q2c)   [right of=q2b]                      {};
+    \node[state0][label=below:3]         (q3)    [below of=q1]                       {};
+    \node[state1][label=above:4]         (q4)    [above=1.4cm of q0a]                {};
+    \node[state2][label=below:5]         (q5)    [below of=q2a]                      {};
+    \node                               (q6a)   [above of=q0b]                      {};
+    \node[state2][label=above:6]         (q6)    [above of=q6a]                      {};
+    \node                               (q7a)   [below of=q2b]                      {};
+    \node[state1][label=below:7]         (q7)    [below of=q7a]                      {};
+    \node[state0][label=above:8]         (q8)    [above of=q0c]                      {};
+    \node[state0][label=below:9]         (q9)    [below=1.6cm of q2c]                {};
+    \node                               (q10a)  [above of=q0]                       {};
+    \node[state2][label=above:10]        (q10)   [above left =1.6cm of q10a]               {};
+    \node                               (q11a)  [below of=q2]                       {};
+    \node[state1][label=below:11]        (q11)   [below left =1.3cm of q11a]               {};
+
+    \path[->]
+                (q0) edge [sloped, above]		node [align=center]	{}	(q1)
+                (q2) edge [sloped, above]		node [align=center]	{}	(q0)
+                (q2) edge [sloped, above]		node [align=center]	{}	(q1)
+                (q2) edge [sloped, above]		node [align=center]	{}	(q4)
+                (q3) edge [sloped, above]		node [align=center]	{}	(q0)
+                (q3) edge [sloped, above]		node [align=center]	{}	(q1)
+                (q3) edge [sloped, above]		node [align=center]	{}	(q5)
+                (q4) edge [sloped, above]		node [align=center]	{}	(q5)
+                (q4) edge [sloped, above]		node [align=center]	{}	(q6)
+                (q7) edge [sloped, above]		node [align=center]	{}	(q5)
+                (q7) edge [sloped, above]		node [align=center]	{}	(q6)
+                (q8) edge [sloped, above]		node [align=center]	{}	(q6)
+                (q8) edge [sloped, above]		node [align=center]	{}	(q10)
+                (q8) edge [sloped, above]		node [align=center]	{}	(q11)
+                (q9) edge [sloped, above]		node [align=center]	{}	(q7)
+                (q9) edge [sloped, above]		node [align=center]	{}	(q10)
+                (q9) edge [sloped, above]		node [align=center]	{}	(q11)
+                (q11) edge [sloped, above]		node [align=center]	{}	(q10)
+                ;
+    \end{tikzpicture}
+\end{figure}
+\begin{figure}[H]
+  \centering
+    \begin{tikzpicture}[>=stealth',shorten >= 1pt,auto,node distance=1.4cm,semithick, state0/.style={circle,draw,minimum size=0.3cm,inner sep=0pt, fill = black!70}, state1/.style={circle,draw,minimum size=0.3cm,inner sep=0pt, fill = red!70}, state2/.style={circle,draw,minimum size=0.3cm,inner sep=0pt, fill = yellow!70}]
+
+    \node[state0][label=above:0]         (q0)                                        {};
+    \node                               (q0a)   [right of=q0]                       {};
+    \node                               (q0b)   [right of=q0a]                      {};
+    \node                               (q0c)   [right of=q0b]                      {};
+    \node[state1][label=above:1]         (q1)    [right of=q0c]                      {};
+    \node[state2][label=below:2]         (q2)    [below of=q0]                       {};
+    \node                               (q2a)   [right of=q2]                       {};
+    \node                               (q2b)   [right of=q2a]                      {};
+    \node                               (q2c)   [right of=q2b]                      {};
+    \node[state2][label=below:3]         (q3)    [below of=q1]                       {};
+    \node[state0][label=above:4]         (q4)    [above=1.4cm of q0a]                {};
+    \node[state1][label=below:5]         (q5)    [below of=q2a]                      {};
+    \node                               (q6a)   [above of=q0b]                      {};
+    \node[state1][label=above:6]         (q6)    [above of=q6a]                      {};
+    \node                               (q7a)   [below of=q2b]                      {};
+    \node[state0][label=below:7]         (q7)    [below of=q7a]                      {};
+    \node[state0][label=above:8]         (q8)    [above of=q0c]                      {};
+    \node[state0][label=below:9]         (q9)    [below=1.6cm of q2c]                {};
+    \node                               (q10a)  [above of=q0]                       {};
+    \node[state1][label=above:10]        (q10)   [above left =1.6cm of q10a]               {};
+    \node                               (q11a)  [below of=q2]                       {};
+    \node[state1][label=below:11]        (q11)   [below left =1.3cm of q11a]               {};
+
+    \path[->]
+                (q0) edge [sloped, above]		node [align=center]	{}	(q1)
+                (q0) edge [sloped, above]		node [align=center]	{}	(q2)
+                (q0) edge [sloped, above]		node [align=center]	{}	(q3)
+                (q1) edge [sloped, above]		node [align=center]	{}	(q2)
+                (q1) edge [sloped, above]		node [align=center]	{}	(q3)
+                (q4) edge [sloped, above]		node [align=center]	{}	(q2)
+                (q4) edge [sloped, above]		node [align=center]	{}	(q5)
+                (q4) edge [sloped, above]		node [align=center]	{}	(q6)
+                (q5) edge [sloped, above]		node [align=center]	{}	(q3)
+                (q7) edge [sloped, above]		node [align=center]	{}	(q5)
+                (q7) edge [sloped, above]		node [align=center]	{}	(q10)
+                (q7) edge [sloped, above]		node [align=center]	{}	(q11)
+                (q8) edge [sloped, above]		node [align=center]	{}	(q6)
+                (q8) edge [sloped, above]		node [align=center]	{}	(q10)
+                (q8) edge [sloped, above]		node [align=center]	{}	(q11)
+                (q9) edge [sloped, above]		node [align=center]	{}	(q6)
+                (q9) edge [sloped, above]		node [align=center]	{}	(q10)
+                (q9) edge [sloped, above]		node [align=center]	{}	(q11)
+                ;
+    \end{tikzpicture}
+\end{figure}
+\begin{figure}[H]
+  \centering
+    \begin{tikzpicture}[>=stealth',shorten >= 1pt,auto,node distance=1.4cm,semithick, state0/.style={circle,draw,minimum size=0.3cm,inner sep=0pt, fill = black!70}, state1/.style={circle,draw,minimum size=0.3cm,inner sep=0pt, fill = red!70}, state2/.style={circle,draw,minimum size=0.3cm,inner sep=0pt, fill = yellow!70}]
+
+    \node[state0][label=above:0]         (q0)                                        {};
+    \node                               (q0a)   [right of=q0]                       {};
+    \node                               (q0b)   [right of=q0a]                      {};
+    \node                               (q0c)   [right of=q0b]                      {};
+    \node[state1][label=above:1]         (q1)    [right of=q0c]                      {};
+    \node[state2][label=below:2]         (q2)    [below of=q0]                       {};
+    \node                               (q2a)   [right of=q2]                       {};
+    \node                               (q2b)   [right of=q2a]                      {};
+    \node                               (q2c)   [right of=q2b]                      {};
+    \node[state2][label=below:3]         (q3)    [below of=q1]                       {};
+    \node[state1][label=above:4]         (q4)    [above=1.4cm of q0a]                {};
+    \node[state0][label=below:5]         (q5)    [below of=q2a]                      {};
+    \node                               (q6a)   [above of=q0b]                      {};
+    \node[state2][label=above:6]         (q6)    [above of=q6a]                      {};
+    \node                               (q7a)   [below of=q2b]                      {};
+    \node[state0][label=below:7]         (q7)    [below of=q7a]                      {};
+    \node[state1][label=above:8]         (q8)    [above of=q0c]                      {};
+    \node[state1][label=below:9]         (q9)    [below=1.6cm of q2c]                {};
+    \node                               (q10a)  [above of=q0]                       {};
+    \node[state0][label=above:10]        (q10)   [above left =1.6cm of q10a]               {};
+    \node                               (q11a)  [below of=q2]                       {};
+    \node[state2][label=below:11]        (q11)   [below left =1.3cm of q11a]               {};
+
+    \path[->]
+                (q0) edge [sloped, above]		node [align=center]	{}	(q1)
+                (q0) edge [sloped, above]		node [align=center]	{}	(q2)
+                (q0) edge [sloped, above]		node [align=center]	{}	(q3)
+                (q1) edge [sloped, above]		node [align=center]	{}	(q2)
+                (q1) edge [sloped, above]		node [align=center]	{}	(q3)
+                (q4) edge [sloped, above]		node [align=center]	{}	(q2)
+                (q4) edge [sloped, above]		node [align=center]	{}	(q6)
+                (q5) edge [sloped, above]		node [align=center]	{}	(q3)
+                (q5) edge [sloped, above]		node [align=center]	{}	(q6)
+                (q5) edge [sloped, above]		node [align=center]	{}	(q8)
+                (q7) edge [sloped, above]		node [align=center]	{}	(q4)
+                (q7) edge [sloped, above]		node [align=center]	{}	(q6)
+                (q7) edge [sloped, above]		node [align=center]	{}	(q9)
+                (q8) edge [sloped, above]		node [align=center]	{}	(q11)
+                (q9) edge [sloped, above]		node [align=center]	{}	(q11)
+                (q10) edge [sloped, above]		node [align=center]	{}	(q8)
+                (q10) edge [sloped, above]		node [align=center]	{}	(q9)
+                (q10) edge [sloped, above]		node [align=center]	{}	(q11)
+                ;
+    \end{tikzpicture}
+\end{figure}
+\begin{figure}[H]
+  \centering
+    \begin{tikzpicture}[>=stealth',shorten >= 1pt,auto,node distance=1.4cm,semithick, state0/.style={circle,draw,minimum size=0.3cm,inner sep=0pt, fill = black!70}, state1/.style={circle,draw,minimum size=0.3cm,inner sep=0pt, fill = red!70}, state2/.style={circle,draw,minimum size=0.3cm,inner sep=0pt, fill = yellow!70}]
+
+    \node[state2][label=above:0]         (q0)                                        {};
+    \node                               (q0a)   [right of=q0]                       {};
+    \node                               (q0b)   [right of=q0a]                      {};
+    \node                               (q0c)   [right of=q0b]                      {};
+    \node[state0][label=above:1]         (q1)    [right of=q0c]                      {};
+    \node[state1][label=below:2]         (q2)    [below of=q0]                       {};
+    \node                               (q2a)   [right of=q2]                       {};
+    \node                               (q2b)   [right of=q2a]                      {};
+    \node                               (q2c)   [right of=q2b]                      {};
+    \node[state1][label=below:3]         (q3)    [below of=q1]                       {};
+    \node[state2][label=above:4]         (q4)    [above=1.4cm of q0a]                {};
+    \node[state0][label=below:5]         (q5)    [below of=q2a]                      {};
+    \node                               (q6a)   [above of=q0b]                      {};
+    \node[state1][label=above:6]         (q6)    [above of=q6a]                      {};
+    \node                               (q7a)   [below of=q2b]                      {};
+    \node[state1][label=below:7]         (q7)    [below of=q7a]                      {};
+    \node[state1][label=above:8]         (q8)    [above of=q0c]                      {};
+    \node[state0][label=below:9]         (q9)    [below=1.6cm of q2c]                {};
+    \node                               (q10a)  [above of=q0]                       {};
+    \node[state0][label=above:10]        (q10)   [above left =1.6cm of q10a]               {};
+    \node                               (q11a)  [below of=q2]                       {};
+    \node[state2][label=below:11]        (q11)   [below left =1.3cm of q11a]               {};
+
+    \path[->]
+                (q1) edge [sloped, above]		node [align=center]	{}	(q0)
+                (q1) edge [sloped, above]		node [align=center]	{}	(q2)
+                (q1) edge [sloped, above]		node [align=center]	{}	(q3)
+                (q2) edge [sloped, above]		node [align=center]	{}	(q0)
+                (q2) edge [sloped, above]		node [align=center]	{}	(q4)
+                (q3) edge [sloped, above]		node [align=center]	{}	(q0)
+                (q5) edge [sloped, above]		node [align=center]	{}	(q3)
+                (q5) edge [sloped, above]		node [align=center]	{}	(q6)
+                (q5) edge [sloped, above]		node [align=center]	{}	(q8)
+                (q6) edge [sloped, above]		node [align=center]	{}	(q4)
+                (q7) edge [sloped, above]		node [align=center]	{}	(q4)
+                (q8) edge [sloped, above]		node [align=center]	{}	(q11)
+                (q9) edge [sloped, above]		node [align=center]	{}	(q6)
+                (q9) edge [sloped, above]		node [align=center]	{}	(q7)
+                (q9) edge [sloped, above]		node [align=center]	{}	(q11)
+                (q10) edge [sloped, above]		node [align=center]	{}	(q7)
+                (q10) edge [sloped, above]		node [align=center]	{}	(q8)
+                (q10) edge [sloped, above]		node [align=center]	{}	(q11)
+                ;
+    \end{tikzpicture}
+\end{figure}
+\begin{figure}[H]
+  \centering
+    \begin{tikzpicture}[>=stealth',shorten >= 1pt,auto,node distance=1.4cm,semithick, state0/.style={circle,draw,minimum size=0.3cm,inner sep=0pt, fill = black!70}, state1/.style={circle,draw,minimum size=0.3cm,inner sep=0pt, fill = red!70}, state2/.style={circle,draw,minimum size=0.3cm,inner sep=0pt, fill = yellow!70}]
+
+    \node[state0][label=above:0]         (q0)                                        {};
+    \node                               (q0a)   [right of=q0]                       {};
+    \node                               (q0b)   [right of=q0a]                      {};
+    \node                               (q0c)   [right of=q0b]                      {};
+    \node[state1][label=above:1]         (q1)    [right of=q0c]                      {};
+    \node[state2][label=below:2]         (q2)    [below of=q0]                       {};
+    \node                               (q2a)   [right of=q2]                       {};
+    \node                               (q2b)   [right of=q2a]                      {};
+    \node                               (q2c)   [right of=q2b]                      {};
+    \node[state2][label=below:3]         (q3)    [below of=q1]                       {};
+    \node[state0][label=above:4]         (q4)    [above=1.4cm of q0a]                {};
+    \node[state0][label=below:5]         (q5)    [below of=q2a]                      {};
+    \node                               (q6a)   [above of=q0b]                      {};
+    \node[state1][label=above:6]         (q6)    [above of=q6a]                      {};
+    \node                               (q7a)   [below of=q2b]                      {};
+    \node[state1][label=below:7]         (q7)    [below of=q7a]                      {};
+    \node[state1][label=above:8]         (q8)    [above of=q0c]                      {};
+    \node[state0][label=below:9]         (q9)    [below=1.6cm of q2c]                {};
+    \node                               (q10a)  [above of=q0]                       {};
+    \node[state2][label=above:10]        (q10)   [above left =1.6cm of q10a]               {};
+    \node                               (q11a)  [below of=q2]                       {};
+    \node[state2][label=below:11]        (q11)   [below left =1.3cm of q11a]               {};
+
+    \path[->]
+                (q0) edge [sloped, above]		node [align=center]	{}	(q1)
+                (q0) edge [sloped, above]		node [align=center]	{}	(q2)
+                (q0) edge [sloped, above]		node [align=center]	{}	(q3)
+                (q1) edge [sloped, above]		node [align=center]	{}	(q2)
+                (q1) edge [sloped, above]		node [align=center]	{}	(q3)
+                (q4) edge [sloped, above]		node [align=center]	{}	(q2)
+                (q4) edge [sloped, above]		node [align=center]	{}	(q6)
+                (q4) edge [sloped, above]		node [align=center]	{}	(q7)
+                (q5) edge [sloped, above]		node [align=center]	{}	(q3)
+                (q5) edge [sloped, above]		node [align=center]	{}	(q6)
+                (q5) edge [sloped, above]		node [align=center]	{}	(q8)
+                (q7) edge [sloped, above]		node [align=center]	{}	(q10)
+                (q7) edge [sloped, above]		node [align=center]	{}	(q11)
+                (q8) edge [sloped, above]		node [align=center]	{}	(q10)
+                (q8) edge [sloped, above]		node [align=center]	{}	(q11)
+                (q9) edge [sloped, above]		node [align=center]	{}	(q6)
+                (q9) edge [sloped, above]		node [align=center]	{}	(q10)
+                (q9) edge [sloped, above]		node [align=center]	{}	(q11)
+                ;
+    \end{tikzpicture}
+\end{figure}
+\begin{figure}[H]
+  \centering
+    \begin{tikzpicture}[>=stealth',shorten >= 1pt,auto,node distance=1.4cm,semithick, state0/.style={circle,draw,minimum size=0.3cm,inner sep=0pt, fill = black!70}, state1/.style={circle,draw,minimum size=0.3cm,inner sep=0pt, fill = red!70}, state2/.style={circle,draw,minimum size=0.3cm,inner sep=0pt, fill = yellow!70}]
+
+    \node[state0][label=above:0]         (q0)                                        {};
+    \node                               (q0a)   [right of=q0]                       {};
+    \node                               (q0b)   [right of=q0a]                      {};
+    \node                               (q0c)   [right of=q0b]                      {};
+    \node[state2][label=above:1]         (q1)    [right of=q0c]                      {};
+    \node[state1][label=below:2]         (q2)    [below of=q0]                       {};
+    \node                               (q2a)   [right of=q2]                       {};
+    \node                               (q2b)   [right of=q2a]                      {};
+    \node                               (q2c)   [right of=q2b]                      {};
+    \node[state1][label=below:3]         (q3)    [below of=q1]                       {};
+    \node[state0][label=above:4]         (q4)    [above=1.4cm of q0a]                {};
+    \node[state0][label=below:5]         (q5)    [below of=q2a]                      {};
+    \node                               (q6a)   [above of=q0b]                      {};
+    \node[state1][label=above:6]         (q6)    [above of=q6a]                      {};
+    \node                               (q7a)   [below of=q2b]                      {};
+    \node[state2][label=below:7]         (q7)    [below of=q7a]                      {};
+    \node[state2][label=above:8]         (q8)    [above of=q0c]                      {};
+    \node[state0][label=below:9]         (q9)    [below=1.6cm of q2c]                {};
+    \node                               (q10a)  [above of=q0]                       {};
+    \node[state1][label=above:10]        (q10)   [above left =1.6cm of q10a]               {};
+    \node                               (q11a)  [below of=q2]                       {};
+    \node[state1][label=below:11]        (q11)   [below left =1.3cm of q11a]               {};
+
+    \path[->]
+                (q0) edge [sloped, above]		node [align=center]	{}	(q1)
+                (q1) edge [sloped, above]		node [align=center]	{}	(q2)
+                (q1) edge [sloped, above]		node [align=center]	{}	(q3)
+                (q2) edge [sloped, above]		node [align=center]	{}	(q0)
+                (q2) edge [sloped, above]		node [align=center]	{}	(q4)
+                (q3) edge [sloped, above]		node [align=center]	{}	(q0)
+                (q3) edge [sloped, above]		node [align=center]	{}	(q5)
+                (q4) edge [sloped, above]		node [align=center]	{}	(q7)
+                (q5) edge [sloped, above]		node [align=center]	{}	(q8)
+                (q6) edge [sloped, above]		node [align=center]	{}	(q4)
+                (q6) edge [sloped, above]		node [align=center]	{}	(q5)
+                (q6) edge [sloped, above]		node [align=center]	{}	(q9)
+                (q7) edge [sloped, above]		node [align=center]	{}	(q10)
+                (q7) edge [sloped, above]		node [align=center]	{}	(q11)
+                (q8) edge [sloped, above]		node [align=center]	{}	(q10)
+                (q8) edge [sloped, above]		node [align=center]	{}	(q11)
+                (q10) edge [sloped, above]		node [align=center]	{}	(q9)
+                (q11) edge [sloped, above]		node [align=center]	{}	(q9)
+                ;
+    \end{tikzpicture}
+\end{figure}
+\begin{figure}[H]
+  \centering
+    \begin{tikzpicture}[>=stealth',shorten >= 1pt,auto,node distance=1.4cm,semithick, state0/.style={circle,draw,minimum size=0.3cm,inner sep=0pt, fill = black!70}, state1/.style={circle,draw,minimum size=0.3cm,inner sep=0pt, fill = red!70}, state2/.style={circle,draw,minimum size=0.3cm,inner sep=0pt, fill = yellow!70}]
+
+    \node[state0][label=above:0]         (q0)                                        {};
+    \node                               (q0a)   [right of=q0]                       {};
+    \node                               (q0b)   [right of=q0a]                      {};
+    \node                               (q0c)   [right of=q0b]                      {};
+    \node[state1][label=above:1]         (q1)    [right of=q0c]                      {};
+    \node[state2][label=below:2]         (q2)    [below of=q0]                       {};
+    \node                               (q2a)   [right of=q2]                       {};
+    \node                               (q2b)   [right of=q2a]                      {};
+    \node                               (q2c)   [right of=q2b]                      {};
+    \node[state2][label=below:3]         (q3)    [below of=q1]                       {};
+    \node[state1][label=above:4]         (q4)    [above=1.4cm of q0a]                {};
+    \node[state0][label=below:5]         (q5)    [below of=q2a]                      {};
+    \node                               (q6a)   [above of=q0b]                      {};
+    \node[state0][label=above:6]         (q6)    [above of=q6a]                      {};
+    \node                               (q7a)   [below of=q2b]                      {};
+    \node[state2][label=below:7]         (q7)    [below of=q7a]                      {};
+    \node[state1][label=above:8]         (q8)    [above of=q0c]                      {};
+    \node[state1][label=below:9]         (q9)    [below=1.6cm of q2c]                {};
+    \node                               (q10a)  [above of=q0]                       {};
+    \node[state0][label=above:10]        (q10)   [above left =1.6cm of q10a]               {};
+    \node                               (q11a)  [below of=q2]                       {};
+    \node[state2][label=below:11]        (q11)   [below left =1.3cm of q11a]               {};
+
+    \path[->]
+                (q0) edge [sloped, above]		node [align=center]	{}	(q2)
+                (q0) edge [sloped, above]		node [align=center]	{}	(q3)
+                (q1) edge [sloped, above]		node [align=center]	{}	(q0)
+                (q2) edge [sloped, above]		node [align=center]	{}	(q1)
+                (q2) edge [sloped, above]		node [align=center]	{}	(q4)
+                (q3) edge [sloped, above]		node [align=center]	{}	(q1)
+                (q4) edge [sloped, above]		node [align=center]	{}	(q6)
+                (q5) edge [sloped, above]		node [align=center]	{}	(q3)
+                (q6) edge [sloped, above]		node [align=center]	{}	(q7)
+                (q7) edge [sloped, above]		node [align=center]	{}	(q4)
+                (q8) edge [sloped, above]		node [align=center]	{}	(q5)
+                (q8) edge [sloped, above]		node [align=center]	{}	(q6)
+                (q9) edge [sloped, above]		node [align=center]	{}	(q5)
+                (q9) edge [sloped, above]		node [align=center]	{}	(q10)
+                (q10) edge [sloped, above]		node [align=center]	{}	(q7)
+                (q10) edge [sloped, above]		node [align=center]	{}	(q11)
+                (q11) edge [sloped, above]		node [align=center]	{}	(q8)
+                (q11) edge [sloped, above]		node [align=center]	{}	(q9)
+                ;
+    \end{tikzpicture}
+\end{figure}
